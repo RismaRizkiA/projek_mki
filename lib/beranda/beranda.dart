@@ -13,7 +13,7 @@ class Home extends StatelessWidget {
       body: Stack(
         children: [
           Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.topCenter, //tampilan body
             child: Container(
               width: MediaQuery.of(context).size.width * 100,
               height: 200,
