@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:projek_bps/beranda/beranda.dart';
 
 class Splashscreen extends StatefulWidget {
+  // splashscreen
   const Splashscreen({super.key});
 
   @override
