@@ -28,19 +28,8 @@ class Home extends StatelessWidget {
               ),
             ),
           ),
-          // Align(
-          //   alignment: Alignment.topCenter,
-          //   child: Container(
-          //     width: MediaQuery.of(context).size.width * 100,
-          //     height: 36,
-          //     decoration: BoxDecoration(
-          //       color: Colors.white,
-          //       borderRadius: BorderRadius.circular(0),
-          //     ),
-          //   ),
-          // ),
           Positioned(
-            top: 0,
+            top: 15,
             left: 18,
             child: Image.asset(
               'asset/logo/logo.png',
