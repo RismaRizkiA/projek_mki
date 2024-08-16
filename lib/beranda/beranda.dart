@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 100,
               height: 200,
               decoration: BoxDecoration(
-                color: Colors.blue[200],
+                color: Color(0xFF85BB4E1),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(0), 
                   topRight: Radius.circular(0),
@@ -29,12 +29,30 @@ class Home extends StatelessWidget {
             ),
           ),
           Positioned(
-            top: 15,
-            left: 18,
+            top: 0,
+            left: 15,
             child: Image.asset(
               'asset/logo/logo.png',
               width: 170,
-              height: 170,
+              height: 47,
+            ),
+          ),
+          Positioned(
+            top: 10,
+            right: 50,
+            child: Icon(
+              Icons.account_circle_outlined,
+              size: 35,
+              color: Colors.white,
+            ),
+          ),
+          Positioned(
+            top: 10,
+            right: 10,
+            child: Icon(
+              Icons.info_outline,
+              size: 35,
+              color: Colors.white,
             ),
           )
         ],
