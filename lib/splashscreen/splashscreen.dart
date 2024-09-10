@@ -16,7 +16,7 @@ class _SplashscreenState extends State<Splashscreen> {
   void initState() {
     
     super.initState();
-    Timer(Duration(seconds: 2), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Home())));
+    Timer(Duration(seconds: 2), ()=>Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeUtama())));
   }
   @override
   Widget build(BuildContext context) {

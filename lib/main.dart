@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projek_bps/publikasi/detail.dart';
+import 'package:projek_bps/publikasi/publikasi.dart';
+import 'package:projek_bps/beranda/beranda.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
 
 void main() {
@@ -33,7 +36,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Splashscreen(),
+      home: Splashscreen(),
+      // home: HomeUtama(),
     );
   }
 }
