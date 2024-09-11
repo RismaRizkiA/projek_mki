@@ -1328,7 +1328,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -1365,7 +1365,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 110,
                             width: 350,
@@ -1402,7 +1402,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -1439,7 +1439,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -1476,7 +1476,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -1513,7 +1513,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -1599,7 +1599,7 @@ class Berandaa extends State<Beranda> {
                           ),
                           SizedBox(height: 15),
                           Container(
-                            height: 350,
+                            height: 380,
                             width: 350,
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
@@ -1631,13 +1631,13 @@ class Berandaa extends State<Beranda> {
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [KESEHATAN] - Persentase Penduduk di Jawa Timur Dirinci Menurut Kabupaten/Kota, Berobat Jalan Selama Satu Bulan Terakhir dan Jenis Kelamin (Persen), 2015 - 2023",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [KESEHATAN] - Persentase Penduduk di Jawa Timur Mempunyai Keluhan Kesehatan Dirinci Menurut Kabupaten/Kota, Pernah Mengobati Sendiri Selama Satu Bulan Terakhir dan Jenis Kelamin (Persen), 2019 - 2023",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
@@ -1646,9 +1646,9 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
-                            height: 250,
+                            height: 280,
                             width: 350,
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
@@ -1680,19 +1680,19 @@ class Berandaa extends State<Beranda> {
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [INFLASI] - Inflasi Tahun ke Tahun (Persen), 2014 - 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [INFLASI] - Inflasi Bulanan (Persen), 2014 - 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [INFLASI] - Inflasi Tahun Kalender Menurut Kelompok Pengeluaran (Persen), 2022 - 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
@@ -1701,9 +1701,9 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
-                            height: 350,
+                            height: 380,
                             width: 350,
                             padding: EdgeInsets.all(10),
                             decoration: BoxDecoration(
@@ -1735,31 +1735,31 @@ class Berandaa extends State<Beranda> {
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [Harga Eceran] - Rata-rata Harga Eceran Beberapa Jenis Barang, 2023",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [Harga Eceran] - Rata-rata Harga Eceran Beberapa Jenis Barang, 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [Harga Produsen] - Rata-rata Harga Produsen Beberapa Jenis Barang, 2022",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [Harga Produsen] - Rata-rata Harga Produsen Beberapa Jenis Barang, 2023",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 [Harga Produsen] - Rata-rata Harga Produsen Beberapa Jenis Barang, 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
@@ -1818,7 +1818,7 @@ class Berandaa extends State<Beranda> {
                           SizedBox(height: 15),
                           Image.asset('asset/Background/info1.png'),
 
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Image.asset('asset/Background/info2.png'),
 
                           // Section 4: Berita Resmi Statistik
@@ -1902,7 +1902,7 @@ class Berandaa extends State<Beranda> {
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 Perkembangan Indeks Harga Konsumenn/Inflasi Banyuwangi Bulan Agustus 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
@@ -1911,7 +1911,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 200,
                             width: 350,
@@ -1945,13 +1945,13 @@ class Berandaa extends State<Beranda> {
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 Perkembangan Jasa Akomodasi Kabupaten Banyuwangi Juni 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
                                   textAlign: TextAlign.justify,
                                 ),
-                                SizedBox(height: 10),
+                                SizedBox(height: 15),
                                 Text(
                                   "\u2022 Perkembangan Indeks Harga Konsumen/Inflasi Banyuwangi Bulan Juli 2024",
                                   style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
@@ -1960,7 +1960,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -1997,7 +1997,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
@@ -2034,7 +2034,7 @@ class Berandaa extends State<Beranda> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 100,
                             width: 350,
