@@ -2,6 +2,56 @@ import 'package:flutter/material.dart';
 import 'package:projek_bps/publikasi/publikasi.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
 
+class HomeUtama extends StatefulWidget{
+  @override
+  State<HomeUtama> createState() => _HomeUtamaState();
+}
+
+class _HomeUtamaState extends State<HomeUtama> {
+  int i = 2;
+  List<Widget> widgets = [
+    PublicationScreen(), Berita(), Beranda() , Tabel(), BeritaResmiStatistik(),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: widgets[i],
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: i,
+        onTap: (value) {
+          setState(() {
+            i = value;
+          });
+        },
+        selectedItemColor: Color(0xFF5BB4E1), //Warna text saat dipilih
+        unselectedItemColor: Colors.black, // warna text saat tidak dipilih
+        items: [
+          BottomNavigationBarItem(
+            icon: Image.asset('asset/logo/publikasi.png', height: 27, width: 27, color: Color(0xFF5BB4E1),),
+            label:  "Publikasi"
+          ),        
+          BottomNavigationBarItem(
+            icon: Image.asset('asset/logo/berita.png', height: 27, width: 27, color: Color(0xFF5BB4E1),),
+            label: "Berita"
+          ),
+           BottomNavigationBarItem(
+            icon: Image.asset('asset/logo/beranda.png', height: 27, width: 27,),
+            label: "Beranda"
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('asset/logo/data.png', height: 27, width: 27, color: Color(0xFF5BB4E1),),
+            label: "Tabel"
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset('asset/logo/brs.png', height: 27, width: 27, color: Color(0xFF5BB4E1),),
+            label: "Berita Resmi Statistik"
+          ),
+        ]
+      ),
+    );
+  }
+}
+
 class PublicationScreen extends StatefulWidget {
   @override
   _PublicationScreenState createState() => _PublicationScreenState();
@@ -63,7 +113,7 @@ class _PublicationScreenState extends State<PublicationScreen> {
             // Bagian tab filter (Terbaru, Populer, Utama)
             SizedBox(height: 15),
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // Tab Terbaru
                 GestureDetector(
@@ -73,7 +123,7 @@ class _PublicationScreenState extends State<PublicationScreen> {
                     });
                   },
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
                     decoration: BoxDecoration(
                       color: selectedTab == "Semua" ? Colors.blue.shade200 : Colors.transparent,
                       borderRadius: BorderRadius.circular(20),
@@ -96,7 +146,7 @@ class _PublicationScreenState extends State<PublicationScreen> {
                     });
                   },
                   child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
                     decoration: BoxDecoration(
                       color: selectedTab == "Populer" ? Colors.blue.shade200 : Colors.transparent,
                       borderRadius: BorderRadius.circular(20),
@@ -105,29 +155,6 @@ class _PublicationScreenState extends State<PublicationScreen> {
                       'Populer',
                       style: TextStyle(
                         fontWeight: selectedTab == "Populer" ? FontWeight.bold : FontWeight.normal,
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 40),
-                
-                // Tab Utama
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      selectedTab = "Utama";
-                    });
-                  },
-                  child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: BoxDecoration(
-                      color: selectedTab == "Utama" ? Colors.blue.shade200 : Colors.transparent,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: Text(
-                      'Utama',
-                      style: TextStyle(
-                        fontWeight: selectedTab == "Utama" ? FontWeight.bold : FontWeight.normal,
                       ),
                     ),
                   ),
@@ -257,4 +284,56 @@ Widget publicationCard({required String imagePath, required String title, requir
       ],
     ),
   );
+}
+
+class Berita extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(
+        child: Text("Berita"),
+      ),
+    );
+  }
+}
+
+class Beranda extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(
+        child: Text("Berita"),
+      ),
+    );
+  }
+}
+
+class Tabel extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(
+        child: Text(
+          "Tabel"
+        ),
+      ),
+    );
+  }
+}
+
+class BeritaResmiStatistik extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(
+        child: Text(
+          "Berita Resmi Statistik"
+        ),
+      ),
+    );
+  }
 }

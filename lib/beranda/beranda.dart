@@ -75,10 +75,14 @@ class Berita extends StatelessWidget{
   }
 }
 
-class Beranda extends StatelessWidget {
-  const Beranda({super.key});
+class Beranda extends StatefulWidget {
+  @override
+  Berandaa createState() => Berandaa();
+}
 
-  // String selectedTab = "Semua";
+class Berandaa extends State<Beranda> {
+  String selectedTab = "Semua";
+
 
   @override
   Widget build(BuildContext context) {
@@ -115,11 +119,12 @@ class Beranda extends StatelessWidget {
                     ),
                   ),
                   actions: [
+                    // IconButton(
+                    //   icon: Icon(Icons.account_circle_outlined, color: Colors.white,size: 35,),
+                    //   onPressed: (){},
+                    // ),
                     IconButton(
-                      icon: Icon(Icons.account_circle_outlined, color: Colors.white,size: 35,),
-                      onPressed: (){},
-                    ),
-                    IconButton(
+                      padding: EdgeInsets.only(right: 20),
                       icon: Icon(Icons.info_outline, color: Colors.white, size: 35,),
                       onPressed: (){},
                     ),
@@ -1156,12 +1161,12 @@ class Beranda extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 1),
                 Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),
@@ -1176,10 +1181,11 @@ class Beranda extends StatelessWidget {
                     children: [
                       Column(
                         children: [
-                          SizedBox(height: 10),
+                          SizedBox(height: 0),
                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
+                              SizedBox(height: 0),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
@@ -1191,7 +1197,7 @@ class Beranda extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 15),
+                              SizedBox(height: 5),
                               ElevatedButton(
                                 onPressed: () {},
                                 style: ElevatedButton.styleFrom(
@@ -1232,131 +1238,320 @@ class Beranda extends StatelessWidget {
                               ),
                             ],
                           ),
-                          // Row(
-                          //   mainAxisAlignment: MainAxisAlignment.start,
-                          //   children: [
-                          //     // Tab Semua
-                          //     GestureDetector(
-                          //       onTap: () {
-                          //         setState(() {
-                          //           selectedTab = "Semua";
-                          //         });
-                          //       },
-                          //       child: Container(
-                          //         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                          //         decoration: BoxDecoration(
-                          //           color: selectedTab == "Semua" ? Colors.blue.shade200 : Colors.transparent,
-                          //           borderRadius: BorderRadius.circular(20),
-                          //         ),
-                          //         child: Text(
-                          //           'Semua',
-                          //           style: TextStyle(
-                          //             fontWeight: selectedTab == "Semua" ? FontWeight.bold : FontWeight.normal,
-                          //             color: selectedTab == "Semua" ? Colors.black : Colors.grey,
-                          //           ),
-                          //         ),
-                          //       ),
-                          //     ),
-                          //     SizedBox(width: 40),
-
-                          //     // Tab Populer
-                          //     GestureDetector(
-                          //       onTap: () {
-                          //         setState(() {
-                          //           selectedTab = "Populer";
-                          //         });
-                          //       },
-                          //       child: Container(
-                          //         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                          //         decoration: BoxDecoration(
-                          //           color: selectedTab == "Populer" ? Colors.blue.shade200 : Colors.transparent,
-                          //           borderRadius: BorderRadius.circular(20),
-                          //         ),
-                          //         child: Text(
-                          //           'Populer',
-                          //           style: TextStyle(
-                          //             fontWeight: selectedTab == "Populer" ? FontWeight.bold : FontWeight.normal,
-                          //             color: selectedTab == "Populer" ? Colors.black : Colors.grey,
-                          //           ),
-                          //         ),
-                          //       ),
-                          //     ),
-                          //     SizedBox(width: 40),
-
-                          //     // Tab Utama
-                          //     GestureDetector(
-                          //       onTap: () {
-                          //         setState(() {
-                          //           selectedTab = "Utama";
-                          //         });
-                          //       },
-                          //       child: Container(
-                          //         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                          //         decoration: BoxDecoration(
-                          //           color: selectedTab == "Utama" ? Colors.blue.shade200 : Colors.transparent,
-                          //           borderRadius: BorderRadius.circular(20),
-                          //         ),
-                          //         child: Text(
-                          //           'Utama',
-                          //           style: TextStyle(
-                          //             fontWeight: selectedTab == "Utama" ? FontWeight.bold : FontWeight.normal,
-                          //             color: selectedTab == "Utama" ? Colors.black : Colors.grey,
-                          //           ),
-                          //         ),
-                          //       ),
-                          //     ),
-                          //   ],
-                          // ),
-                          SizedBox(height: 20),
+                          SizedBox(height: 20, width: 20),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                            // Selected 'Semua' Button
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.lightBlue,
+                              // Tab Semua
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    selectedTab = "Semua";
+                                  });
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
+                                  decoration: BoxDecoration(
+                                    color: selectedTab == "Semua" ? Color(0xFF5BB4E1) : Colors.transparent,
                                     borderRadius: BorderRadius.circular(20),
-                                ),
-                                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
-                                child: Text(
-                                  'Semua',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  child: Text(
+                                    'Semua',
+                                    style: TextStyle(
+                                      fontWeight: selectedTab == "Semua" ? FontWeight.bold : FontWeight.normal,
+                                      color: selectedTab == "Semua" ? Colors.black : Colors.grey,
+                                    ),
                                   ),
                                 ),
                               ),
-                              // Non-selected 'Popular' dan 'Utama' Button
-                              Text(
-                                'Populer',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                    fontWeight: FontWeight.normal,
+                              SizedBox(width: 40),
+
+                              // Tab Populer
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    selectedTab = "Populer";
+                                  });
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
+                                  decoration: BoxDecoration(
+                                    color: selectedTab == "Populer" ? Color(0xFF5BB4E1) : Colors.transparent,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Text(
+                                    'Populer',
+                                    style: TextStyle(
+                                      fontWeight: selectedTab == "Populer" ? FontWeight.bold : FontWeight.normal,
+                                      color: selectedTab == "Populer" ? Colors.black : Colors.grey,
+                                    ),
+                                  ),
                                 ),
                               ),
-                              Text(
-                                'Utama',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                    fontWeight: FontWeight.normal,
-                                ),
-                              )
                             ],
                           ),
-                          SizedBox(height: 5),
                           //Section 1: Publikasi Statistik
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: InfoCardList(items: [
-                              '03 Juli 2024 \u2022 Statistik Daerah Kabupaten Banyuwangi 2024',
-                              '30 April 2024 \u2022 Produk Domestik Regional Bruto Kabupaten Banyuwangi Menurut Pengeluaran 2019-2023',
-                              '04 April 2024 \u2022 Produk Domestik Regional Bruto Kabupaten Banyuwangi Menurut Lapangan Usaha 2019-2023',
-                              '28 Februari 2024 \u2022 Kabupaten Banyuwangi Dalam Angka 2024',
-                              '28 Desember 2023 \u2022 Statistik Kesejahteraan Rakyat Kabupaten Banyuwangi 2023',
-                              '15 Desember 2023 \u2022 Hasil Pencacahan Langka Sensus Pertanian 2023-Tahap II Kabupaten Banyuwangi',
-                              '08 Desember 2023 \u2022 Analisis Hasil Survei Kebahagiaan di Badan Pusat Statistik Kabupaten Banyuwangi',
-                            ]), 
+                          SizedBox(height: 15),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "03 Juli 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Statistik Daerah Kabupaten Banyuwangi 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
                           ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "30 April 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Produk Domestik Regional Bruto Kabupaten Banyuwangi Menurut Pengeluaran 2019-2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 110,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "04 April 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Produk Domestik Regional Bruto Kabupaten Banyuwangi Menurut Lapangan Usaha 2019-2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "28 Februari 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Kabupaten Banyuwangi Dalam Angka 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "28 Desember 2023",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Statistik Kesejahteraan Rakyat Kabupaten Banyuwangi 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "15 Desember 2023",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Hasil Pencacahan Langka Sensus Pertanian 2023-Tahap II Kabupaten Banyuwangi",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "08 Desember 2023",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Analisis Hasil Survei Kebahagiaan di Badan Pusat Statistik Kabupaten Banyuwangi",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          // Section 2: Tabel Statistik
+                          SizedBox(height: 15),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -1402,16 +1597,179 @@ class Beranda extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(height: 10),
-                          // Section 2: Tabel Statistik
-                          Padding(
-                            padding: const EdgeInsetsDirectional.all(5.0),
-                            child: InfoCardList(items: [
-                              '22 Juli 2024 \u2022 [KESEHATAN] - Pesantren Pesantren di Jawa Timur yang Memiliki Kerja Sama dengan Layanan Kesehatan Luar',
-                              '19 Juli 2024 \u2022 [INFLASI] - Inflasi Tahunan Kalender',
-                              '17 Juli 2024 \u2022 [HARGA ECERAN] - Rata-rata Harga Eceran Beberapa Jenis Barang',
-                            ]), 
+                          SizedBox(height: 15),
+                          Container(
+                            height: 350,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "22 Juli 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 [KESEHATAN] - Persentase Penduduk di Jawa Timur yang Mempunyai Keluhan Kesehatan Selama Sebulan Terakhir dan Gangguan Sakit Dirinci Menurut Jenis Kelamin dan Kabupaten/Kota (Persen), 2015 - 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [KESEHATAN] - Persentase Penduduk di Jawa Timur Dirinci Menurut Kabupaten/Kota, Berobat Jalan Selama Satu Bulan Terakhir dan Jenis Kelamin (Persen), 2015 - 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [KESEHATAN] - Persentase Penduduk di Jawa Timur Mempunyai Keluhan Kesehatan Dirinci Menurut Kabupaten/Kota, Pernah Mengobati Sendiri Selama Satu Bulan Terakhir dan Jenis Kelamin (Persen), 2019 - 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
                           ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 250,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "5 September 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 [INFLASI] - Inflasi Tahun Kalender (Persen), 2014 - 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [INFLASI] - Inflasi Tahun ke Tahun (Persen), 2014 - 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [INFLASI] - Inflasi Bulanan (Persen), 2014 - 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [INFLASI] - Inflasi Tahun Kalender Menurut Kelompok Pengeluaran (Persen), 2022 - 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 350,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "17 Juli 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 [Harga Eceran] - Rata-rata Harga Eceran Beberapa Jenis Barang, 2022",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [Harga Eceran] - Rata-rata Harga Eceran Beberapa Jenis Barang, 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [Harga Eceran] - Rata-rata Harga Eceran Beberapa Jenis Barang, 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [Harga Produsen] - Rata-rata Harga Produsen Beberapa Jenis Barang, 2022",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [Harga Produsen] - Rata-rata Harga Produsen Beberapa Jenis Barang, 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 [Harga Produsen] - Rata-rata Harga Produsen Beberapa Jenis Barang, 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          // Section 3: Infografis
+                          SizedBox(height: 15),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -1457,10 +1815,14 @@ class Beranda extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(height: 10),  
-                          // Section 3: Infografis
-                          ImageCard(imagePath: 'asset/Background/info1.png'),
-                          ImageCard(imagePath: 'asset/Background/info2.png'),
+                          SizedBox(height: 15),
+                          Image.asset('asset/Background/info1.png'),
+
+                          SizedBox(height: 10),
+                          Image.asset('asset/Background/info2.png'),
+
+                          // Section 4: Berita Resmi Statistik
+                          SizedBox(height: 15),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -1507,15 +1869,207 @@ class Beranda extends StatelessWidget {
                             ],
                           ),
                           SizedBox(height: 10),
-                          // Section 4: Berita Resmi Statistik
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: InfoCardList(items: [
-                              '01 Agustus 2024 \u2022 Perkembangan Indeks Harga Konsumen/Inflasi Banyuwangi Bulan Juli 2024',
-                              '28 Februari 2024 \u2022 Pertumbuhan Ekonomi Kabupaten Banyuwangi Tahun 2023',
-                              '06 Desember 2021 \u2022 Indeks Pembangunan Manusia (IPM) Tahun 2021',
-                              '12 April 2021 \u2022 Luas Panen dan Produksi Padi di Kabupaten Banyuwangi Tahun 2020',
-                            ]),
+                          Container(
+                            height: 150,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "02 September 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Perkembangan Jasa Akomodasi Kabupaten Banyuwangi Juli 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 Perkembangan Indeks Harga Konsumenn/Inflasi Banyuwangi Bulan Agustus 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 200,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "01 Agustus 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Profil Kemiskinan Kabupaten Banyuwangi Maret 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 Perkembangan Jasa Akomodasi Kabupaten Banyuwangi Juni 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "\u2022 Perkembangan Indeks Harga Konsumen/Inflasi Banyuwangi Bulan Juli 2024",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "28 Februari 2024",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Pertumbuhan Ekonomi Kabupaten Banyuwangi Tahun 2023 ",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "01 Maret 2023",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Perkembangan Indeks Harga Konsumen/Inflasi Banyuwangi Bulan Februari 2023",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 10),
+                          Container(
+                            height: 100,
+                            width: 350,
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFC9E1F3),
+                              borderRadius: BorderRadius.circular(8),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 2,
+                                  offset: Offset(0, 3),
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "06 Juni 2017",
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: 6),
+                                Text(
+                                  "\u2022 Perkembangan Indeks Harga Konsumen/Inflasi Banyuwangi Bulan Mei 2017",
+                                  style: TextStyle(fontSize: 14, color: Color(0xFF2787CF)),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
@@ -1563,7 +2117,7 @@ class InfoCardList extends StatelessWidget {
     return Column(
       children: items.map((item) {
         return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4.0),
+          padding: const EdgeInsets.symmetric(vertical: 1),
           child: Card(
             color: Color(0xFFC9E1F3),
             child: Padding(
@@ -1582,15 +2136,15 @@ class InfoCardList extends StatelessWidget {
 
 class ImageCard extends StatelessWidget {
   final String imagePath;
-
+  
   ImageCard({required this.imagePath});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       child: Container(
-        height: 200,
+        height: 150,
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.grey[200],
