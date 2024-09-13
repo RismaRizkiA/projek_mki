@@ -145,7 +145,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -213,7 +213,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -281,7 +281,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -350,7 +350,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color:Color(0xFFDCDDDE),
+                              color:Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -418,7 +418,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -486,7 +486,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -554,7 +554,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -622,7 +622,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -690,7 +690,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -758,7 +758,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -826,7 +826,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -894,7 +894,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -962,7 +962,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -1030,7 +1030,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -1041,7 +1041,7 @@ class Berandaa extends State<Beranda> {
                                     'asset/logo/inflasi.png',
                                     width: 40,
                                     height: 40,
-                                    color: Color(0xFF2787CF),
+                                    color: Color(0xFFC9D8E6),
                                   ),
                                   SizedBox(width: 15),
                                   Column(
@@ -1098,7 +1098,7 @@ class Berandaa extends State<Beranda> {
                             width: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
-                              color: Color(0xFFDCDDDE),
+                              color: Color(0xFFE8E8E8),
                             ),
                             child: Center(
                               child: Row(
@@ -1816,11 +1816,18 @@ class Berandaa extends State<Beranda> {
                             ],
                           ),
                           SizedBox(height: 15),
-                          Image.asset('asset/Background/info1.png'),
+                          Image.asset(
+                            'asset/Background/info1.png',
+                            width: 380,
+                            height: 500,
+                          ),
 
                           SizedBox(height: 15),
-                          Image.asset('asset/Background/info2.png'),
-
+                          Image.asset(
+                            'asset/Background/info2.png',
+                            width: 380,
+                            height: 500,
+                          ),
                           // Section 4: Berita Resmi Statistik
                           SizedBox(height: 15),
                           Column(
@@ -1868,7 +1875,7 @@ class Berandaa extends State<Beranda> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 15),
                           Container(
                             height: 150,
                             width: 350,
@@ -2134,30 +2141,6 @@ class InfoCardList extends StatelessWidget {
   }
 }
 
-class ImageCard extends StatelessWidget {
-  final String imagePath;
-  
-  ImageCard({required this.imagePath});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 15),
-      child: Container(
-        height: 150,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Colors.grey[200],
-          borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-            image: AssetImage('imagePath'),
-            fit: BoxFit.cover,
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class Tabel extends StatelessWidget{
   @override
