@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projek_bps/beranda/beranda.dart';
+import 'package:projek_bps/publikasi/publikasi.dart';
 
 class DetailPublikasi extends StatelessWidget {
   @override
@@ -39,7 +41,10 @@ class DetailPublikasiPage extends StatelessWidget {
                           IconButton(
                             icon: Icon(Icons.arrow_back, color: Colors.white),
                             onPressed: () {
-                              // Aksi ketika tombol kembali ditekan
+                              Navigator.pop(
+                                context,
+                                MaterialPageRoute(builder: (context) => Publikasi()),
+                              );// Aksi ketika tombol kembali ditekan
                             },
                           ),
                           SizedBox(width: 16),
@@ -211,59 +216,3 @@ Widget _buildInfoCard(String title, String value, IconData icon) {
     ],
   );
 }
-
-
-// class InfoCardList extends StatelessWidget {
-//   final List<String> items;
-
-//   InfoCardList({required this.items});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       crossAxisAlignment: CrossAxisAlignment.start,
-//       children: items.map((item) {
-//         final parts = item.split('\u2022');
-//         return Padding(
-//           padding: const EdgeInsets.symmetric(vertical: 4.0),
-//           child: RichText(
-//             text: TextSpan(
-//               children: [
-//                 TextSpan(
-//                   text: parts[0],
-//                   style: TextStyle(
-//                     fontWeight: FontWeight.bold,
-//                     color: Colors.black,
-//                     fontSize: 16,
-//                   ),
-//                 ),
-//                 TextSpan(
-//                   text: '\u2022',
-//                   style: TextStyle(
-//                     color: Colors.black,
-//                     fontSize: 16,
-//                   ),
-//                 ),
-//                 TextSpan(
-//                   text: parts[1],
-//                   style: TextStyle(
-//                     color: Colors.black,
-//                     fontSize: 16,
-//                   ),
-//                 ),
-//               ],
-//             ),
-//             // color: Color(0xFFC9E1F3),
-//             // child: Padding(
-//             //   padding: const EdgeInsets.all(12.0),
-//             //   child: Text(
-//             //     item,
-//             //     style: TextStyle(fontSize: 14, color: Colors.black87),
-//             //   ),
-//             // ),
-//           ),
-//         );
-//       }).toList(),
-//     );
-//   }
-// }

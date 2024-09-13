@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:projek_bps/publikasi/detail.dart';
 import 'package:projek_bps/publikasi/publikasi.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
 
@@ -169,60 +171,70 @@ class _PublicationScreenState extends State<PublicationScreen> {
                     imagePath: 'asset/Background/Image 1.png',
                     title: 'Statistik Daerah Kabupaten Banyuwangi 2024',
                     releaseDate: 'Rilis 03 Juli 2024',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 2.png',
                     title: 'Produk Domestik Regional Bruto Kabupaten Banyuwangi Menurut Pengeluaran 2019-2023',
                     releaseDate: 'Rilis 30 April 2024',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 3.png',
                     title: 'Produk Domestik Regional Bruto Kabupaten Banyuwangi Menurut Lapangan Usaha 2019-2023',
                     releaseDate: 'Rilis 04 April 2024',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 4.png',
                     title: 'Kabupaten Banyuwangi Dalam Angka 2024',
                     releaseDate: 'Rilis 28 Februari 2024',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 5.png',
                     title: 'Statistik Kesejahteraan Rakyat Kabupaten Banyuwangi 2023',
                     releaseDate: 'Rilis 28 Desember 2023',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 6.png',
                     title: 'Hasil Pencacahan Lengkap Sensus Pertanian 2023 - Tahap I Kabupaten Banyuwangi',
                     releaseDate: 'Rilis 15 Desember 2023',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 7.png',
                     title: 'Analisis Hasil Survei Kebutuhan Data Badan Pusat Statistik Kabupaten Banyuwangi 2023',
                     releaseDate: 'Rilis 08 Desember 2023',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 8.png',
                     title: 'Buklet Hasil Pencacahan Lengkap Sensus Pertanian 2023- Tahap I Kabupaten Banyuwangi',
                     releaseDate: 'Rilis 04 Desember 2023',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 9.png',
                     title: 'Indikator Kesejahteraan Rakyat Kabupaten Banyuwangi 2023',
                     releaseDate: 'Rilis 22 November 2023',
+                    context: context,
                   ),
                   SizedBox(height: 10),
                   publicationCard(
                     imagePath: 'asset/Background/Image 10.png',
                     title: 'Luas Panen Dan Produksi Padi Di Kabupaten Banyuwangi 2022',
                     releaseDate: 'Rilis 19 Oktober 2023',
+                    context: context,
                   ),
                 ],
               ),
@@ -234,54 +246,67 @@ class _PublicationScreenState extends State<PublicationScreen> {
   }
 }
 
-Widget publicationCard({required String imagePath, required String title, required String releaseDate}) {
-  return Container(
-    padding: EdgeInsets.all(10),
-    decoration: BoxDecoration(
-      color: Color(0xFFC9E1F3),
-      borderRadius: BorderRadius.circular(10),
-    ),
-    child: Row(
-      children: [
-        // Gambar publikasi
-        Container(
-          width: 60,
-          height: 80,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            image: DecorationImage(
-              image: AssetImage(imagePath),
-              fit: BoxFit.cover,
+Widget publicationCard({
+  required String imagePath, 
+  required String title, 
+  required String releaseDate,
+  required BuildContext context, 
+  }) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => DetailPublikasi()),
+        );
+    },
+    child: Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Color(0xFFC9E1F3),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        children: [
+          // Gambar publikasi
+          Container(
+            width: 60,
+            height: 80,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              image: DecorationImage(
+                image: AssetImage(imagePath),
+                fit: BoxFit.cover,
+              ),
             ),
           ),
-        ),
-        SizedBox(width: 10),
-          
-        // Detail publikasi
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFF2787CF),
+          SizedBox(width: 10),
+            
+          // Detail publikasi
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF2787CF),
+                  ),
                 ),
-              ),
-              SizedBox(height: 5),
-              Text(
-                releaseDate,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Color(0xFF2787CF),
+                SizedBox(height: 5),
+                Text(
+                  releaseDate,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Color(0xFF2787CF),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }
@@ -304,7 +329,7 @@ class Beranda extends StatelessWidget{
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Center(
-        child: Text("Berita"),
+        child: Text("Beranda"),
       ),
     );
   }
