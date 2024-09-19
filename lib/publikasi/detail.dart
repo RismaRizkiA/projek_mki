@@ -1,16 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projek_bps/beranda/beranda.dart';
 import 'package:projek_bps/publikasi/publikasi.dart';
+import 'package:projek_bps/unduh/unduh.dart';
 
-class DetailPublikasi extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: DetailPublikasiPage(),
-    );
-  }
-}
 
 class DetailPublikasiPage extends StatelessWidget {
   @override
@@ -137,6 +129,18 @@ class DetailPublikasiPage extends StatelessWidget {
                         child: ElevatedButton.icon(
                           onPressed: () {
                             // Aksi untuk unduh publikasi
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Dialog(
+                                  backgroundColor: Colors.transparent,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: PopUpUnduh(),
+                                );
+                              },
+                            );
                           },
                           label: Text(
                             "Unduh Publikasi (2.45 MB)",
