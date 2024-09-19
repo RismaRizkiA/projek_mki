@@ -1199,7 +1199,14 @@ class Berandaa extends State<Beranda> {
                               ),
                               SizedBox(height: 5),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PublicationScreen(),
+                                    ),
+                                  );
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Colors.lightBlue,
                                   shape: RoundedRectangleBorder(

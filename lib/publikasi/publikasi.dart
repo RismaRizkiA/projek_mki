@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:projek_bps/beranda/beranda.dart';
 import 'package:projek_bps/publikasi/detail.dart';
 import 'package:projek_bps/publikasi/publikasi.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
@@ -12,7 +13,7 @@ class HomeUtama extends StatefulWidget{
 class _HomeUtamaState extends State<HomeUtama> {
   int i = 2;
   List<Widget> widgets = [
-    PublicationScreen(), Berita(), Beranda() , Tabel(), BeritaResmiStatistik(),
+    Publikasi(), Berita(), Beranda() , Tabel(), BeritaResmiStatistik(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -256,7 +257,7 @@ Widget publicationCard({
     onTap: () {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => DetailPublikasi()),
+        MaterialPageRoute(builder: (context) => DetailPublikasiPage()),
         );
     },
     child: Container(

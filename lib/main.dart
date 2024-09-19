@@ -3,6 +3,7 @@ import 'package:projek_bps/publikasi/detail.dart';
 import 'package:projek_bps/publikasi/publikasi.dart';
 import 'package:projek_bps/beranda/beranda.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
+import 'package:projek_bps/unduh/unduh.dart';
 
 void main() {
   runApp(const MyApp());
