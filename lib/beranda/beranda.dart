@@ -2313,45 +2313,19 @@ class Berandaa extends State<Beranda> {
                               ),
                             ],
                           ),
-                          // SizedBox(height: 15),
-                          // GestureDetector(
-                          //   // onTap: () {
-                          //   //   //Aksi ketika container ditekan
-                          //   //   Navigator.push(
-                          //   //     context,
-                          //   //     MaterialPageRoute(builder: (context) =>Infografis)
-                          //   //   );
-                          //   // },
-                          //   child: Column(
-                          //     crossAxisAlignment: CrossAxisAlignment.start,
-                          //     children: [
-                          //       Image.asset(
-                          //         'asset/Background/info1.png',
-                          //         width: 380,
-                          //         height: 500,
-                          //       ),
-                          //       SizedBox(height: 15),
-                          //       Image.asset(
-                          //         'asset/Background/info2.png',
-                          //         width: 380,
-                          //         height: 500,
-                          //       ),
-                          //     ],
-                          //   )
-                          // ),
                           SizedBox(height: 15),
                           GestureDetector(
                             // onTap: () {
-                            //   //Aksi ketika container ditekan
+                            //   Aksi ketika container ditekan
                             //   Navigator.push(
                             //     context,
-                            //     MaterialPageRoute(builder: (context) =>Infografis)
+                            //     MaterialPageRoute(builder: (context) =>DetailBRS)
                             //   );
                             // },
                             child: Container(
                               height: 500,
                               width: 350,
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                               decoration: BoxDecoration(
                                 color: Color(0xFFC9E1F3),
                                 borderRadius: BorderRadius.circular(8),
@@ -2368,27 +2342,27 @@ class Berandaa extends State<Beranda> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    'asset/Background/info 1.png',
+                                    'asset/Background/info1.png',
                                     width: 380,
-                                    height: 500,
+                                    height: 480,
                                   ),
                                 ],
                               ),
-                            )
+                            ),
                           ),
                           SizedBox(height: 15),
                           GestureDetector(
                             // onTap: () {
-                            //   //Aksi ketika container ditekan
+                            //   Aksi ketika container ditekan
                             //   Navigator.push(
                             //     context,
-                            //     MaterialPageRoute(builder: (context) =>Infografis)
+                            //     MaterialPageRoute(builder: (context) =>DetailBRS)
                             //   );
                             // },
                             child: Container(
                               height: 500,
                               width: 350,
-                              padding: EdgeInsets.all(10),
+                              padding: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 10),
                               decoration: BoxDecoration(
                                 color: Color(0xFFC9E1F3),
                                 borderRadius: BorderRadius.circular(8),
@@ -2404,15 +2378,14 @@ class Berandaa extends State<Beranda> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  SizedBox(height: 15),
                                   Image.asset(
-                                    'asset/Background/info 2.png',
+                                    'asset/Background/info2.png',
                                     width: 380,
-                                    height: 500,
+                                    height: 480,
                                   ),
                                 ],
                               ),
-                            )
+                            ),
                           ),
                           // Section 4: Berita Resmi Statistik
                           SizedBox(height: 15),
