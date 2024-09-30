@@ -69,6 +69,7 @@ class _PublicationScreenState extends State<PublicationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF5BB4E1),
         title: Text(
           'Publikasi',
@@ -77,6 +78,9 @@ class _PublicationScreenState extends State<PublicationScreen> {
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
+        ),
+        iconTheme: IconThemeData(
+          color: Colors.white,
         ),
       ),
       body: Padding(
