@@ -4,6 +4,9 @@ import 'package:projek_bps/publikasi/publikasi.dart';
 import 'package:projek_bps/beranda/beranda.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
 import 'package:projek_bps/unduh/unduh.dart';
+import 'package:projek_bps/brs/brs.dart';
+import 'package:projek_bps/brs/detail_brs.dart';
+import 'package:projek_bps/tabel/tabel.dart';
 
 void main() {
   runApp(const MyApp());
