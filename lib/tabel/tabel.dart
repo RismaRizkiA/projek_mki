@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_bps/tabel/detail_tabel01.dart';
 import 'package:projek_bps/tabel/tabel.dart';
 
 class TabelScreen extends StatelessWidget {
@@ -144,13 +145,20 @@ class TabelScreen extends StatelessWidget {
                 ],
                 color: Colors.blue,
                 onItemTap: (item) {
-                  // Navigasi ke halaman detail
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => TabelDetailScreen(item: item),
-                    ),
-                  );
+                  if (item == 'Kependudukan dan Migrasi') {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PopulationTablePage(),
+                        ));
+                  } else {
+                    // Navigasi ke halam detail lainnya
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => TabelDetailScreen(item: item),
+                        ));
+                  }
                 },
               ),
               SizedBox(height: 20),
@@ -318,3 +326,52 @@ class TabelDetailScreen extends StatelessWidget {
     );
   }
 }
+
+// Tambahkan kode berikut untuk halaman "PopulationTablePage"
+// class PopulationTablePage extends StatelessWidget {
+//   final List<String> items = [
+//     'Jumlah penduduk (Jiwa)',
+//     'Proyeksi Penduduk 2010-2035 (Laki-laki) (Ribu Jiwa)',
+//     'Proyeksi Penduduk 2010-2035 (Perempuan+Laki-laki) (Ribu Jiwa)',
+//     'Proyeksi Penduduk 2010-2035 (Perempuan) (Ribu Jiwa)',
+//     'Penduduk Usia 10 Tahun Ke Atas di Jawa Timur Dirinci Menurut Kabupaten/Kota dan Jenis Kelamin, 2023',
+//     // (Item lainnya)
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         leading: Icon(Icons.arrow_back, color: Colors.white),
+//         title: Text('Tabel Kependudukan dan Migrasi',
+//             style: TextStyle(color: Colors.white)),
+//         centerTitle: true,
+//         backgroundColor: Color(0xFF5AB4EF),
+//       ),
+//       body: Padding(
+//         padding: const EdgeInsets.all(16.0),
+//         child: ListView.builder(
+//           itemCount: items.length,
+//           itemBuilder: (context, index) {
+//             return Container(
+//               margin: EdgeInsets.symmetric(vertical: 8.0),
+//               decoration: BoxDecoration(
+//                 color: Color(0xFFD4E8FF),
+//                 borderRadius: BorderRadius.circular(10.0),
+//               ),
+//               child: ListTile(
+//                 title: Padding(
+//                   padding: const EdgeInsets.all(8.0),
+//                   child: Text(
+//                     items[index],
+//                     style: TextStyle(fontSize: 16, color: Colors.black87),
+//                   ),
+//                 ),
+//               ),
+//             );
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }

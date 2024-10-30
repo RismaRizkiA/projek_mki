@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:projek_bps/beranda/beranda.dart';
 import 'package:projek_bps/brs/brs.dart';
 import 'package:projek_bps/brs/detail_brs.dart';
 import 'package:projek_bps/splashscreen/splashscreen.dart';
@@ -12,6 +13,7 @@ class HomeUtama extends StatefulWidget {
 class _HomeUtamaState extends State<HomeUtama> {
   int i = 2;
   List<Widget> widgets = [
+    Publikasi(),
     Berita(),
     Beranda(),
     Tabel(),
@@ -278,7 +280,7 @@ Widget brsCard({
       ),
       child: Row(
         children: [
-          // Gambar publikasi
+          // Gambar BRS
           Container(
             width: 100,
             height: 70,
@@ -292,7 +294,7 @@ Widget brsCard({
           ),
           SizedBox(width: 10),
 
-          // Detail publikasi
+          // Detail BRS
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -320,6 +322,18 @@ Widget brsCard({
       ),
     ),
   );
+}
+
+class Publikasi extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Center(
+        child: Text("Publikasi"),
+      ),
+    );
+  }
 }
 
 class Berita extends StatelessWidget {
