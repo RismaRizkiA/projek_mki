@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_bps/menuberita/menu_berita.dart';
 import 'package:projek_bps/publikasi/detail.dart';
 import 'package:projek_bps/publikasi/publikasi.dart';
 import 'package:projek_bps/brs/brs.dart';
@@ -13,7 +14,7 @@ class _HomeUtamaState extends State<HomeUtama> {
   int i = 2;
   List<Widget> widgets = [
     PublicationScreen(),
-    Berita(),
+    MenuBerita(),
     Beranda(),
     TabelScreen(),
     BRSScreen(),
